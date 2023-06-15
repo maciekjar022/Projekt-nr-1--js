@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #faebd7;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.settlement {
+    padding: 40px 20px;
+    width: 500px;
+    border: 2px solid black;
+}
+
+.amount-money {
+    text-align: center;
+    font-size: 30px;
+}
+
+.add-transaction-area {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+
+}
+
+.add-transaction-area button {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    transition: .5s,
+
+}
+
+.add-transaction-area button:hover {
+    background-color: brown;
+    color: antiquewhite;
+}
+
+.transaction {
+    width: 800px;
+}
+
+.transaction h3 {
+    margin: 10px;
+    font-size: 26px;
+    text-align: center;
+}
+
+.transaction-list {
+    display: flex;
+}
+
+.income-place,
+.expenses-place {
+    margin: 0 5px;
+    padding: 10px;
+    width: 50%;
+    border: 2px solid black;
+}
+
+.income-place h3,
+.income-amount {
+    color: #0b6e0b;
+}
+
+.expenses-place h3,
+.expenses-amount {
+    color: #880c21;
+}
+
+.transaction-income,
+.transaction-expenses {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.adding-transactions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 70px;
+    width: 90%;
+    height: 70%;
+    color: antiquewhite;
+    background-color: rgb(146, 105, 105);
+
+}
+
+.adding-transactions h2.title {
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.adding-transactions label {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.adding-transactions input,
+.adding-transactions select {
+    width: 500px;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+
+.adding-transactions button {
+    padding: 10px 10px;
+}
+
+.adding-transactions option {
+    font-size: 16px;
+}
+
+
+.approval {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.approval button {
+    margin: 0 20px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #d2691e;
+    transition: .5s;
+}
+
+.approval button:hover {
+    background-color: bisque;
+    color: #880c21;
+}
+
+button {
+    margin: 5px;
+    background-color: #d2691e
+}
+
+button:hover {
+    background-color: #880c21;
+    color: antiquewhite;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/41b79d9f2a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Budżet domowy</title>
+  </head>
+  <body>
+    <header>
+      <h1>Kontroler wydatków domowych</h1>
+    </header>
+    <main>
+      <section class="settlement">
+        <div>
+          <h2 class="title">Posiadane środki:</h2>
+          <p class="amount-money">0zł</p>
+        </div>
+        <div class="add-transaction-area">
+          <button class="add-transaction">Dodaj</button>
+        </div>
+      </section>
+      <section class="transaction">
+        <h2 class="title">Lista moich transakcji</h2>
+        <div class="transaction-list">
+          <div class="income-place">
+            <h3>Przychody</h3>
+            <div class="transaction-income" id="income1"></div>
+          </div>
+          <div class="expenses-place">
+            <h3>Wydatki</h3>
+            <div class="transaction-expenses" id="expenses1"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="adding-transactions">
+      <h2 class="title">Nowa transakcja</h2>
+
+      <label for="name">Nazwa: </label>
+      <input type="text" id="name" />
+
+      <label for="amount">Kwota: </label>
+      <input type="number" id="amount" />
+      <small> (przy wydatkach na początku wstaw znak minus)</small>
+
+      <div class="approval">
+        <button class="save">Zapisz</button>
+        <button class="cancel">Anuluj</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
