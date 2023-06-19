@@ -6,6 +6,7 @@
 
 body {
     min-height: 100vh;
+    width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #faebd7;
 }
@@ -34,12 +35,13 @@ main {
 .settlement {
     padding: 40px 20px;
     width: 500px;
+    font-size: 16px;
     border: 2px solid black;
 }
 
 .amount-money {
     text-align: center;
-    font-size: 30px;
+    font-size: 36px;
 }
 
 .add-transaction-area {
@@ -57,20 +59,11 @@ main {
 
 }
 
-.add-transaction-area button:hover {
-    background-color: brown;
-    color: antiquewhite;
-}
-
 .transaction {
-    width: 800px;
+    width: 90%;
+    font-size: 16px;
 }
 
-.transaction h3 {
-    margin: 10px;
-    font-size: 26px;
-    text-align: center;
-}
 
 .transaction-list {
     display: flex;
@@ -78,96 +71,43 @@ main {
 
 .income-place,
 .expenses-place {
+    display: flex;
+    flex-direction: column;
     margin: 0 5px;
     padding: 10px;
     width: 50%;
     border: 2px solid black;
+
 }
 
-.income-place h3,
+.income-place,
 .income-amount {
     color: #0b6e0b;
 }
 
-.expenses-place h3,
+.expenses-place,
 .expenses-amount {
     color: #880c21;
+}
+
+.income-place,
+.expenses-place,
+label,
+input {
+    font-size: 20px;
 }
 
 .transaction-income,
 .transaction-expenses {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: column;
     padding: 10px 0;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .delete {
     cursor: pointer;
-}
-
-.adding-transactions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10px;
-    position: absolute;
-    top: 0;
-    left: 70px;
-    width: 90%;
-    height: 70%;
-    color: antiquewhite;
-    background-color: rgb(146, 105, 105);
-
-}
-
-.adding-transactions h2.title {
-    font-weight: 300;
-    font-size: 30px;
-    margin-bottom: 5px;
-}
-
-.adding-transactions label {
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.adding-transactions input,
-.adding-transactions select {
-    width: 500px;
-    padding: 10px 10px;
-    font-size: 16px;
-}
-
-.adding-transactions button {
-    padding: 10px 10px;
-}
-
-.adding-transactions option {
-    font-size: 16px;
-}
-
-
-.approval {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-}
-
-.approval button {
-    margin: 0 20px;
-    cursor: pointer;
-    font-size: 20px;
-    background-color: #d2691e;
-    transition: .5s;
-}
-
-.approval button:hover {
-    background-color: bisque;
-    color: #880c21;
 }
 
 button {
@@ -175,7 +115,9 @@ button {
     background-color: #d2691e
 }
 
-button:hover {
-    background-color: #880c21;
-    color: antiquewhite;
+/* wpis poniżej zostawiam bo tylko taki zapis daje efekt w postaci przesunięcia do prawej,
+kombinacje z dipslay flex nie dają rozwiązania albo ja tego nie potrafię  */
+.button-delete,
+.button-edit {
+    float: right;
 }
