@@ -21,39 +21,51 @@
           <h2 class="title">Posiadane środki:</h2>
           <p class="amount-money">0zł</p>
         </div>
-        <div class="add-transaction-area">
-          <button class="add-transaction">Dodaj</button>
-        </div>
       </section>
       <section class="transaction">
         <h2 class="title">Lista moich transakcji</h2>
         <div class="transaction-list">
           <div class="income-place">
             <h3>Przychody</h3>
-            <div class="transaction-income" id="income1"></div>
+            <label for="income-name">Nazwa: </label>
+            <input type="text" id="income-name" />
+
+            <label for="income-amount">Kwota: </label>
+            <input type="number" id="income-amount" />
+
+            <div class="add-transaction-area">
+              <button class="add-transaction">Dodaj</button>
+            </div>
+
+            <div class="transaction-income" id="income"></div>
+
+            <div>
+              <h2 class="title-sum">Suma przychodów:</h2>
+              <p class="income-money">0zł</p>
+            </div>
           </div>
+
           <div class="expenses-place">
             <h3>Wydatki</h3>
-            <div class="transaction-expenses" id="expenses1"></div>
+            <label for="expense-name">Nazwa: </label>
+            <input type="text" id="expense-name" />
+
+            <label for="expense-amount">Kwota: </label>
+            <input type="number" id="expense-amount" />
+
+            <div class="add-transaction-area">
+              <button class="add-transaction">Dodaj</button>
+            </div>
+            <div class="transaction-expenses" id="expenses"></div>
+
+            <div>
+              <h2 class="title-sum">Suma wydatków:</h2>
+              <p class="expense-money">0zł</p>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <section class="adding-transactions">
-      <h2 class="title">Nowa transakcja</h2>
-
-      <label for="name">Nazwa: </label>
-      <input type="text" id="name" />
-
-      <label for="amount">Kwota: </label>
-      <input type="number" id="amount" />
-      <small> (przy wydatkach na początku wstaw znak minus)</small>
-
-      <div class="approval">
-        <button class="save">Zapisz</button>
-        <button class="cancel">Anuluj</button>
-      </div>
-    </section>
 
     <script src="script.js"></script>
   </body>
