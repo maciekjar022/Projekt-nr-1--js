@@ -2,9 +2,12 @@ const incomeForm = document.querySelector(".income-place");
 const expenseForm = document.querySelector(".expenses-place");
 const incomeList = document.querySelector(".transaction-income");
 const expenseList = document.querySelector(".transaction-expenses");
-const balanceAmount = document.querySelector(".amount-money");
+const settlement = document.querySelector(".settlement");
 const incomeSum = document.querySelector(".income-money");
 const expenseSum = document.querySelector(".expense-money");
+const balanceMessage = document.querySelector(".balance-message");
+const incomeSumElement = document.querySelector(".income-money");
+const expenseSumElement = document.querySelector(".expense-money");
 
 let income = 0;
 let expenses = 0;
@@ -82,16 +85,42 @@ function addTransaction(type) {
   }
 
   updateBalance();
+  updateIncomeSum();
+  updateExpenseSum();
 
   nameInput.value = "";
   amountInput.value = "";
 }
 
+function updateIncomeSum() {
+  incomeSumElement.textContent = `${income.toFixed(2)}zł`;
+}
+
+function updateExpenseSum() {
+  expenseSumElement.textContent = `${expenses.toFixed(2)}zł`;
+}
+
 function updateBalance() {
   const balance = income - expenses;
-  balanceAmount.textContent = `${balance.toFixed(2)}zł`;
-  incomeSum.textContent = `${income.toFixed(2)}zł`;
-  expenseSum.textContent = `${expenses.toFixed(2)}zł`;
+  const settlementMessage = document.createElement("p");
+
+  if (balance > 0) {
+    settlementMessage.textContent = `Możesz jeszcze wydać ${balance.toFixed(
+      2
+    )} złotych.`;
+  } else if (balance === 0) {
+    settlementMessage.textContent = "Bilans wynosi zero.";
+  } else {
+    settlementMessage.textContent = `Bilans jest ujemny. Jesteś na minusie ${Math.abs(
+      balance
+    ).toFixed(2)} złotych.`;
+  }
+
+  if (settlement.childNodes.length > 0) {
+    settlement.replaceChild(settlementMessage, settlement.childNodes[0]);
+  } else {
+    settlement.appendChild(settlementMessage);
+  }
 }
 
 incomeForm.addEventListener("click", function (e) {
@@ -105,18 +134,3 @@ expenseForm.addEventListener("click", function (e) {
     addTransaction("expense");
   }
 });
-
-function calculateInitialTotals() {
-  const initialIncome = Array.from(incomeList.children)
-    .map((item) => parseFloat(item.textContent.split(":")[1]))
-    .reduce((total, value) => total + value, 0);
-
-  const initialExpenses = Array.from(expenseList.children)
-    .map((item) => parseFloat(item.textContent.split(":")[1]))
-    .reduce((total, value) => total + value, 0);
-
-  income = initialIncome;
-  expenses = initialExpenses;
-
-  updateBalance();
-}
