@@ -12,26 +12,21 @@
     <title>Budżet domowy</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1>Kontroler wydatków domowych</h1>
     </header>
     <main>
-      <section class="settlement">
-        <div>
-          <h2 class="title">Posiadane środki:</h2>
-          <p class="amount-money">0zł</p>
-        </div>
-      </section>
+      <section class="settlement"></section>
       <section class="transaction">
         <h2 class="title">Lista moich transakcji</h2>
         <div class="transaction-list">
           <div class="income-place">
             <h3>Przychody</h3>
-            <label for="income-name">Nazwa: </label>
-            <input type="text" id="income-name" />
+            <label class="entry" for="income-name">Nazwa: </label>
+            <input class="entry" type="text" id="income-name" />
 
-            <label for="income-amount">Kwota: </label>
-            <input type="number" id="income-amount" />
+            <label class="entry" for="income-amount">Kwota: </label>
+            <input class="entry" type="number" id="income-amount" />
 
             <div class="add-transaction-area">
               <button class="add-transaction">Dodaj</button>
@@ -39,7 +34,7 @@
 
             <div class="transaction-income" id="income"></div>
 
-            <div>
+            <div class="income-sum">
               <h2 class="title-sum">Suma przychodów:</h2>
               <p class="income-money">0zł</p>
             </div>
@@ -47,18 +42,18 @@
 
           <div class="expenses-place">
             <h3>Wydatki</h3>
-            <label for="expense-name">Nazwa: </label>
-            <input type="text" id="expense-name" />
+            <label class="entry" for="expense-name">Nazwa: </label>
+            <input class="entry" type="text" id="expense-name" />
 
-            <label for="expense-amount">Kwota: </label>
-            <input type="number" id="expense-amount" />
+            <label class="entry" for="expense-amount">Kwota: </label>
+            <input class="entry" type="number" id="expense-amount" />
 
             <div class="add-transaction-area">
               <button class="add-transaction">Dodaj</button>
             </div>
             <div class="transaction-expenses" id="expenses"></div>
 
-            <div>
+            <div class="expense-sum">
               <h2 class="title-sum">Suma wydatków:</h2>
               <p class="expense-money">0zł</p>
             </div>
