@@ -11,7 +11,7 @@ body {
     background-color: #faebd7;
 }
 
-header {
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@ main {
 .settlement {
     padding: 40px 20px;
     width: 500px;
-    font-size: 16px;
+    font-size: 26px;
     border: 2px solid black;
 }
 
@@ -90,12 +90,10 @@ main {
     color: #880c21;
 }
 
-.income-place,
-.expenses-place,
-label,
-input {
+.entry {
     font-size: 20px;
 }
+
 
 .transaction-income,
 .transaction-expenses {
@@ -115,8 +113,7 @@ button {
     background-color: #d2691e
 }
 
-/* wpis poniżej zostawiam bo tylko taki zapis daje efekt w postaci przesunięcia do prawej,
-kombinacje z dipslay flex nie dają rozwiązania albo ja tego nie potrafię  */
+/* może już nich tak zastanie:)  */
 .button-delete,
 .button-edit {
     float: right;
